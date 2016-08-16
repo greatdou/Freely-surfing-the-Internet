@@ -1,2 +1,1 @@
-# alphabet
-This is a free project
+这是一个通过shadowsocks实现的免流量上网脚本
