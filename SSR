@@ -127,23 +127,23 @@ function pre_install(){
 # Download files
 function download_files(){
     # Download libsodium file
-    if ! wget --no-check-certificate -O libsodium-1.0.10.tar.gz https://soft.alphabrock.cn/shadowsocks/SSR/libsodium-1.0.10.tar.gz; then
+    if ! wget --no-check-certificate -O libsodium-1.0.10.tar.gz http://service.chuxen.com/libsodium-1.0.10.tar.gz; then
         echo "错误：抱歉，libsodium文件下载失败！"
         exit 1
     fi
     # Download ShadowsocksR file
-    # if ! wget --no-check-certificate -O manyuser.zip https://soft.alphabrock.cn/shadowsocks/SSR/shadowsocks-manyuser.zip; then
+    # if ! wget --no-check-certificate -O manyuser.zip http://service.chuxen.com/shadowsocks-manyuser.zip; then
         # echo "错误：抱歉，shadowsocksr文件下载失败！"
         # exit 1
     # fi
     # Download ShadowsocksR chkconfig file
     if [ "$OS" == 'CentOS' ]; then
-        if ! wget --no-check-certificate https://soft.alphabrock.cn/shadowsocks/SSR/ShadowsocksR -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate http://service.chuxen.com/ShadowsocksR  -O /etc/init.d/shadowsocks; then
             echo "错误：抱歉，shadowsocksr chkconfig文件下载失败！"
             exit 1
         fi
     else
-        if ! wget --no-check-certificate https://soft.alphabrock.cn/shadowsocks/SSR/ShadowsocksR-debian -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate http://service.chuxen.com/ShadowsocksR-debian -O /etc/init.d/shadowsocks; then
             echo "错误：抱歉，ShadowsocksR-debian文件下载失败！"
             exit 1
         fi
